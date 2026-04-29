@@ -1,0 +1,44 @@
+# ============================================================================
+# AUTHORIZED PHISHING SIMULATION - CONFIGURATION
+# FOR AUTHORIZED USE ONLY - Unauthorized use is strictly prohibited.
+# ============================================================================
+
+# SMTP Server Settings
+# Replace with your organization's SMTP relay or mail server.
+smtp:
+  host: "smtp.example.com"
+  port: 587
+  username: "security-team@yourcompany.com"
+  password: "CHANGE_ME_USE_ENV_VARIABLE"  # Prefer SMTP_PASSWORD env var
+  use_tls: true
+  sender_address: "security-team@yourcompany.com"
+  sender_name: "IT Security Team"
+
+# Domain Whitelisting
+# ONLY email addresses belonging to these domains will be accepted.
+# This is the primary safety mechanism to prevent accidental external sends.
+authorized_domains:
+  - "yourcompany.com"
+  - "yourcompany.org"
+  # Add additional authorized internal domains below:
+  # - "subsidiary.yourcompany.com"
+
+# Rate Limiting
+# Minimum delay (in seconds) between consecutive email sends.
+rate_limit:
+  delay_seconds: 5
+  max_emails_per_run: 50
+
+# Simulation Settings
+simulation:
+  campaign_name: "Q1-2026-Security-Awareness"
+  watermark_text: "[SECURITY SIMULATION TEST - DO NOT PANIC]"
+  log_file: "logs/simulation_log.json"
+  dry_run: true  # Set to false to actually send emails
+
+# Company Info (injected into templates)
+company:
+  name: "Acme Corporation"
+  domain: "yourcompany.com"
+  support_email: "helpdesk@yourcompany.com"
+  it_department: "Information Technology Department"
