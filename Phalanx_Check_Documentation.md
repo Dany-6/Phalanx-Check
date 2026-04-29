@@ -6,11 +6,6 @@
 
 <br><br><br>
 
-**Submitted in partial fulfillment of the requirements for the degree of**
-
-
-<br><br><br>
-
 **By**
 
 **[Haripriyan B.A]**
