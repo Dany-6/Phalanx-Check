@@ -387,7 +387,14 @@ Simulates an Accounts Payable email requesting urgent invoice approval, with a f
   "domain_validated": true
 }
 ```
+Want to send a REAL email? (Optional)
+If you want to actually see the email arrive in an inbox:
 
+1.Open the config.yaml file.
+2.Change line 37 from dry_run: true to dry_run: false.
+3.Open the .env file and put in real SMTP credentials (like a Gmail App Password).
+4.Change the emails in targets.csv to an email address you own (make sure you add that email's domain to the authorized_domains list in config.yaml first!).
+5.Run the python main.py command again.
 ---
 
 ## Safety Mechanisms
