@@ -175,6 +175,8 @@ cd phalanx-check
 # Windows
 python -m venv .venv
 .venv\Scripts\activate
+Run this if windows power shell bloxks the command :
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 # Linux / macOS
 python3 -m venv .venv
